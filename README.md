@@ -13,3 +13,6 @@ Then move the `genome_decontaminate.rb` script to the desired location.
 ## Usage  
 Execute the following command substituting your file names as appropriate:  
 `ruby genome_decontaminate.rb <input_fasta> <NCBI_contaminant_file> > <output_fasta>`  
+
+## Citation  
+Campana, M.G. 2019. genome_decontaminate. <https://github.com/campanam/genome_decontaminate>.  
