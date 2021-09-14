@@ -10,6 +10,9 @@ The script requires [Ruby](http://www.ruby-lang.org) >= 2.0. Download the script
 `git clone https://github.com/campanam/genome_decontaminate`  
 Then move the `genome_decontaminate.rb` script to the desired location.  
 
+## Input  
+The script requires the genome sequence submitted to NCBI in fasta format. It also requires the NCBI contamination screen results file in text format.  
+
 ## Usage  
 Execute the following command substituting your file names as appropriate:  
 `ruby genome_decontaminate.rb <input_fasta> <NCBI_contaminant_file> > <output_fasta>`  
