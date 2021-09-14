@@ -1,6 +1,6 @@
 # genome_decontaminate  
 
-Michael G. Campana, 2019  
+Michael G. Campana, 2019-2021  
 Smithsonian Conservation Biology Institute  
 
 Script to remove NCBI-identified contaminant sequences from a genome  
