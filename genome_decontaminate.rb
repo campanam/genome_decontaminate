@@ -52,7 +52,7 @@ def decontaminate(input_file)
 	end
 end
 if ARGV[0].nil?
-	puts "Usage: ruby genome_decontaminate.rb <input_fasta> <NCBI_contaminant_file> > <output_fasta"
+	puts "Usage: ruby genome_decontaminate.rb <input_fasta> <NCBI_contaminant_file> > <output_fasta>"
 else
 	read_contaminants(ARGV[1])
 	decontaminate(ARGV[0])
