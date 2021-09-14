@@ -1,5 +1,7 @@
 #!/bin/bash/ruby
 # Michael G. Campana, 2019
+# Smithsonian Conservation Biology Institute
+# genome_decontaminate v0.1.0
 
 $drop_seqs = [] # Sequences to exclude
 $trim_seqs = {} # Sequences to trim
