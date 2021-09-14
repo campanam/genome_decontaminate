@@ -1,7 +1,7 @@
 #!/bin/bash/ruby
-# Michael G. Campana, 2019
+# Michael G. Campana, 2019-2021
 # Smithsonian Conservation Biology Institute
-# genome_decontaminate v0.1.0
+# genome_decontaminate v0.2.0
 
 $drop_seqs = [] # Sequences to exclude
 $trim_seqs = {} # Sequences to trim
@@ -44,7 +44,7 @@ def decontaminate(input_file)
 				$trim_seqs.keys.include?(chromo) ? @trimline = true : @trimline = false
 			elsif @trimline
 				for i in $trim_seqs[chromo][0]..$trim_seqs[chromo][1]
-					line[i] = "N"
+					$softmask ? line[i] = line[i].downcase : line[i] = "N"
 				end
 			end
 			if @printline
@@ -54,8 +54,9 @@ def decontaminate(input_file)
 	end
 end
 if ARGV[0].nil?
-	puts "Usage: ruby genome_decontaminate.rb <input_fasta> <NCBI_contaminant_file> > <output_fasta>"
+	puts "Usage: ruby genome_decontaminate.rb <input_fasta> <NCBI_contaminant_file> [soft] > <output_fasta>"
 else
+	ARGV[2] == 'soft' ? $softmask = true : $softmask = false
 	read_contaminants(ARGV[1])
 	decontaminate(ARGV[0])
 end
