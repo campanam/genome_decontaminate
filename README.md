@@ -15,7 +15,8 @@ The script requires the genome sequence submitted to NCBI in unwrapped fasta for
 
 ## Usage  
 Execute the following command substituting your file names as appropriate:  
-`ruby genome_decontaminate.rb <input_fasta> <NCBI_contaminant_file> > <output_fasta>`  
+`ruby genome_decontaminate.rb <input_fasta> <NCBI_contaminant_file> [soft] > <output_fasta>`  
+If you append 'soft' to the command (after specifying the input files), the command will soft-mask bases with lowercase letters rather than hard-masking with Ns.  
 
 ## Citation  
 Campana, M.G. 2019. genome_decontaminate. <https://github.com/campanam/genome_decontaminate>.  
