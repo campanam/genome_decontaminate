@@ -6,7 +6,7 @@ Smithsonian Conservation Biology Institute
 Script to remove NCBI-identified contaminant sequences from a genome  
 
 ## Requirements and Installation  
-The script requires [Ruby](www.ruby-lang.org) >= 2.0. Download the script using:  
+The script requires [Ruby](http://www.ruby-lang.org) >= 2.0. Download the script using:  
 `git clone https://github.com/campanam/genome_decontaminate`  
 Then move the `genome_decontaminate.rb` script to the desired location.  
 
