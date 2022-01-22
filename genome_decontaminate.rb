@@ -86,7 +86,7 @@ def decontaminate
 					for span in $trim_seqs[chromo]
 						span_arr = span.split("..").map { |x| x.to_i - 1}
 						if $options.splitcontam
-							endbase = span_arr[0 - 1] # Get last base before split section
+							endbase = span_arr[0] - 1 # Get last base before split section
 							if endbase - startbase > $options.minlen # Only retain long enough segments
 								outline << header + partcount.to_s + "\n" + line[startbase..endbase] + "\n"
 								startbase = span_arr[1]+1
